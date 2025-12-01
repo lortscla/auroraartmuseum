@@ -6,6 +6,7 @@
     <title>Aurora Art Museum Home</title> 
 
     <link href="hamburgers.css" rel="stylesheet"> 
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link href="style.css" rel="stylesheet">
 
      <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
@@ -22,8 +23,6 @@
 
 
     <div class="topbar">
-
-
 
         <div class="secondary-nav-links">
           <nav>
@@ -108,9 +107,47 @@
 
   <div class="container-home">
 
-    <h1>Fall Special!</h1>
+    <h1>Welcome to the Aurora Art Museum!</h1>
 
-    <h2>Pumpkin Cookies with Pumpkin Coffee, $4.00</h2>
+    <p>A contemporary cultural hub dedicated to celebrating creativity, fostering dialogue, and connecting communities through the power of art. We believe art has the power to illuminate, challenge, and inspire. Our mission is to provide a space where diverse voices are represented, ideas are exchanged, and every visitor feels a sense of belonging.</p>
+
+    <h2>Highlights From Our Permanent Collection</h2>
+
+                      <!------------------------------------------ home carousel start ---------------------------------------->
+
+            <div id="carouselExampleIndicators" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="images/collection/digital-landscape-4.webp" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="images/collection/cityscape-in-motion.webp" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="images/collection/threadsofsilence.webp" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<div class="caption">
+<p><strong>Charade is a 1963 film directed by Stanley Donen and starring the dynamic duo of Audrey Hepburn and Cary Grant. Set against the backdrop of the enchanting Parisian streets, this film weaves a tale of suspense, romance, and humor that has left an indelible mark on the world of cinema.</strong>
+    </p>
+    </div>
+
+                <!------------------------------------------ home carousel end ---------------------------------------->
 
     <div class="home">
       <div><img src="images/special.webp" alt="Pumpkin cookies and coffee"></div>
@@ -129,7 +166,7 @@
       <p>Can’t recommend it highly enough! - Julia</p>
     </div>
 
-      </div>
+ </div>
 
        <!------------------------------------------ collection ---------------------------------------->
 
@@ -411,7 +448,8 @@
   </footer>
 
   <script src="script.js"></script>
-  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
 </body>
 </html>
 
