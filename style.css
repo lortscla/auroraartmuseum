@@ -202,9 +202,10 @@ html, body {
   padding-top: 20px;
 }
 
-#carouselExampleIndicators img {
-  max-height: 550px;
-  object-fit: cover;
+.carousel {
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
 }
 
 .container-drink-menu {
