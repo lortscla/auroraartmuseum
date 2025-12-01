@@ -1,16 +1,17 @@
 :root {
-  --h1-color: #a14b00;
+  --h1-color: #641435;
   --black-text-color: #000;
-  --hover-color: #ac7937;
-  --body-font-family: 'Instrument Sans', sans-serif;
-  --header-font-family: 'Merriweather', serif;
+  --hover-color: #fd92a5;
+  --body-font-family: 'Montserrat', sans-serif;
+  --header-font-family: 'Garamond', serif;
   --h1-font-weight: bold;
   --h2-font-weight: bold;
   --h1-font-size: 40px;
   --h2-font-size: 20px;
   --body-font-size: 20px;
-  --button-background-color: #522f07;
+  --button-background-color: #641435;
   --button-text-color: #fff;
+  --bg-color: #E7EAFF
 }
 
 * {
@@ -25,14 +26,12 @@ html, body {
 }
 
 .hero {
-    background-image: url('images/hero3b.webp');
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0 auto;
     position: relative;
     width: 100%;    
     max-width: 1440px;
-    padding-bottom: 20px;
  }
 
 .navbar {
@@ -43,37 +42,83 @@ html, body {
   flex-direction: column;
   align-items: center;
   gap: 60%;
-  z-index: 2;
   box-sizing: border-box;
+  background-color: var(--bg-color);
+  top: 0;
+  left: 0;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
 }
 
 .logo img {
-  height: 300px; 
+  height: 110px; 
   width: auto;
   display: block;
   transition: transform 0.3s ease;
+  padding: 20px 0 0 20px;
 }
 
-.nav-links {
+.nav-links,
+.secondary-nav-links {
   list-style: none;
   display: flex;
   justify-content: center;
-  background-color: #fff;
+  background-color: var(--bg-color);
   padding: 20px;
-  gap: 50px;
+  gap: 100px;
   margin: 0 auto;
   border-radius: 15px;
 }
 
-.nav-links a {
+.nav-links a,
+.secondary-nav-links a {
   text-decoration: none;
   color: var(--black-text-color);
   font-weight: var(--h2-font-weight);
   font-size: 20px;
+  font-family: var(--header-font-family);
 }
 
-.nav-links a:hover {
+.nav-links a:hover, 
+.secondary-nav-links a:hover {
   color: var(--hover-color);
+}
+
+.secondary-nav-links {
+  position: absolute;
+  top: 10px;
+  right: 40px;
+}
+
+.secondary-nav-links ul {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 45px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  padding: 10px 0;
+  width: 160px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  z-index: 2000;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
 }
 
 .logo img:hover {
@@ -90,6 +135,13 @@ html, body {
 .container-weekly-events {
   max-width: 1440px;
   margin: 0 auto;
+}
+
+.buttons {
+  background-color: var(--button-background-color);
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
 }
 
 .container-drink-menu {
@@ -327,7 +379,7 @@ footer {
   align-items: center;
   padding: 1.5rem;
   background-color: #f9f9f9;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid var(--bg-color);
   text-align: center;
 }
 
