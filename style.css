@@ -340,12 +340,76 @@ p {
   display: flex;
 }
 
-.container-education-events p {
+.container-education-events p,
+.container-membership p {
   padding-top: 20px;
   margin: 0 auto;
   text-align: center;
 }
 
+.container-membership-levels {
+  margin: 0 auto;
+  padding: 20px 0 20px 0;
+  background-color: var(--bg-color);
+}
+
+  .membership-levels {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .membership-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    flex: 1;
+    padding: 20px;
+    transition: transform 0.3s;
+  }
+
+  .membership-card h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  .price {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: var(--h1-color)
+  }
+
+  .benefits {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  .benefits li {
+    margin-bottom: 10px;
+    line-height: 1.4;
+  }
+
+  .container-about p {
+    width: 75%;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .tickets {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    justify-content: center;
+    gap: 100px;
+  }
+
+  .tickets .buttons {
+    margin: 0;
+  }
 
 
 
