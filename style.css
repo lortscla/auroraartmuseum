@@ -168,6 +168,7 @@ html, body {
   padding: 15px 25px;
   display: inline-block;
   margin-left: 44%;
+  margin-top: 40px;
 }
 
 .buttons a {
@@ -193,7 +194,6 @@ html, body {
   margin: 0 auto;
 }
 
-
 h1 {
   text-align: center;      
   font-family: var(--header-font-family);
@@ -208,6 +208,8 @@ h2 {
   font-size: var(--h2-font-size);
   font-weight: bold;
   text-align: center;
+  display:flex;
+  justify-content: center;
   margin-bottom: 30px;
   margin-top: 30px;
 }
@@ -218,6 +220,12 @@ h3 {
   color: var(--black-text-color);
   font-size: 18px;
   padding-bottom: 30px;
+}
+
+p {
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size);
+  color: var(--black-text-color);
 }
 
 .container-home p {
@@ -234,12 +242,12 @@ h3 {
   padding: 20px 0 0 0;
 }
 
-.carousel-inner {
+.carousel-inner .carousel-item img {
   height: 500px;
-  width: 1200px;
+  width: 900px;
+  object-fit: cover;
+  object-position: center center; 
   margin: 0 auto;
-  margin-bottom: 50px;
-  padding: 0 0 50px 0;
 }
 
 .carousel-caption {
@@ -254,7 +262,6 @@ h3 {
   justify-content: center;
 }
 
-/* carousel adjustments sinc arrows don't show after reducing size */
 .carousel .carousel-control-prev {
     left: 60px; 
 }
@@ -271,7 +278,8 @@ h3 {
    background-color:rgb(0, 0, 0);
 }
 
-.collection-row {
+.collection-row,
+.exhibitions-row {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -301,6 +309,12 @@ h3 {
   box-sizing: border-box;
 }
 
+.container-exhibitions p {
+  display:flex;
+  text-align: center;
+  box-sizing: border-box;
+}
+
 .exhibition-caption p {
   max-width: 80%;
   font-family: var(--body-font-family);
@@ -308,8 +322,29 @@ h3 {
   color: var(--black-text-color);
   display:flex;
   text-align: left;
+  justify-content: center;
 }
 
+.events img {
+  margin: 0 auto;
+  display:flex;
+}
+
+.events p {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.container-education-events h2 {
+  text-align: center;
+  display: flex;
+}
+
+.container-education-events p {
+  padding-top: 20px;
+  margin: 0 auto;
+  text-align: center;
+}
 
 
 
