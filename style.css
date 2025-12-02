@@ -67,8 +67,8 @@ html, body {
   width: auto;
   display: block;
   transition: transform 0.3s ease;
-  padding: 20px 0 0 20px;
-  margin-right: 80px;
+  padding: 0 0 15px 0;
+  margin-right: 75px;
 }
 
 .nav-links {
@@ -165,7 +165,7 @@ html, body {
   background-color: var(--button-background-color);
   border: none;
   border-radius: 10px;
-  padding: 10px 20px;
+  padding: 15px 22px;
 }
 
 .buttons a {
@@ -206,6 +206,13 @@ html, body {
   width: 80%;
   height: auto;
   margin: 0 auto;
+  padding: 0 0 40px 0;
+}
+
+.carousel button {
+  display:flex;
+  margin: 0 auto;
+  margin-top: 40px;
 }
 
 .container-drink-menu {
@@ -244,7 +251,7 @@ h1 {
 }
 
 h2 {
-  font-family: var(--body-font-family);
+  font-family: var(--header-font-family);
   color: var(--black-text-color);
   font-size: var(--h2-font-size);
   font-weight: bold;
