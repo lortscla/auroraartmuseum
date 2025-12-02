@@ -2,7 +2,7 @@
   --h1-color: #641435;
   --black-text-color: #000;
   --white-text-color: #fff;
-  --hover-color: #fd92a5;
+  --hover-color: #57969f;
   --body-font-family: 'Montserrat', sans-serif;
   --header-font-family: 'Garamond', serif;
   --h1-font-weight: bold;
@@ -95,7 +95,8 @@ html, body {
 }
 
 .nav-links a:hover, 
-.secondary-nav-links a:hover {
+.secondary-nav-links a:hover,
+buttons a:hover {
   color: var(--hover-color);
 }
 
@@ -447,21 +448,61 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  align-items: center;
+  align-items: top;
   padding: 1.5rem;
   background-color: #f9f9f9;
   border-top: 1px solid var(--bg-color);
   text-align: center;
+  background-color: var(--bg-color);
 }
 
-footer p {
-  margin: 0.3rem 0;
-  font-size: 0.9rem;
+.footer-left,
+.footer-middle,
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.socials img {
+.footer-left p,
+.footer-middle p,
+.footer-right p {
+  text-align: left;
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size)-50%;
+  color: var(--black-text-color);
+  justify-content: flex-start;
+}
+
+.footer-left {
+  gap: 30px;
+  display:flex;
+  justify-content: center;
+}
+
+.footer-left, .logo img {
+  margin: -10px 0 0 0;
+}
+
+.social {
+  display: flex;
+  flex-direction: row;
+}
+
+.social img {
   width: 40px;
   margin: 0 8px;
+  padding-top: 10px;
+}
+
+.social-text, 
+.social-icons {
+  display: flex;
+  flex-direction: column;
+}
+
+.social-text p {
+  margin: 0;
   padding-top: 10px;
 }
 
