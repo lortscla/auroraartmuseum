@@ -2,7 +2,7 @@
   --h1-color: #641435;
   --black-text-color: #000;
   --white-text-color: #fff;
-  --hover-color: #57969f;
+  --hover-color: #72cddb;
   --body-font-family: 'Montserrat', sans-serif;
   --header-font-family: 'Garamond', serif;
   --h1-font-weight: bold;
@@ -42,7 +42,6 @@ html, body {
     position: relative;
     width: 100%;    
     max-width: 1440px;
-    padding-bottom: 40px;
  }
 
 .navbar {
@@ -96,7 +95,7 @@ html, body {
 
 .nav-links a:hover, 
 .secondary-nav-links a:hover,
-buttons a:hover {
+.buttons a:hover {
   color: var(--hover-color);
 }
 
@@ -158,7 +157,7 @@ buttons a:hover {
 }
 
 .logo img:hover {
-    filter: brightness(1.2);
+    filter: brightness(1.5);
     transform: translateY(-5px);
 }
 
@@ -166,7 +165,9 @@ buttons a:hover {
   background-color: var(--button-background-color);
   border: none;
   border-radius: 10px;
-  padding: 15px 22px;
+  padding: 15px 25px;
+  display: inline-block;
+  margin-left: 44%;
 }
 
 .buttons a {
@@ -176,15 +177,18 @@ buttons a:hover {
   font-family: var(--header-font-family);
   text-transform: var(--button-text-style);
   font-size: var(--button-font-size);
+  display: inline-block;
+  text-wrap: nowrap;
 }
 
 /*----------------------------------------- body -----------------------------------------*/
 
-.container-home,
+.container-collection,
 .container-about,
-.container-food-menu,
-.container-drink-menu,
-.container-weekly-events {
+.container-exhibitions,
+.container-education-events,
+.container-membership,
+.container-home {
   max-width: 1440px;
   margin: 0 auto;
 }
@@ -200,7 +204,7 @@ buttons a:hover {
 }
 
 .container-home h2 {
-  padding-top: 20px;
+  padding: 20px 0 0 0;
 }
 
 .carousel {
@@ -210,10 +214,11 @@ buttons a:hover {
   padding: 0 0 40px 0;
 }
 
-.carousel button {
-  display:flex;
+.carousel .buttons {
   margin: 0 auto;
   margin-top: 40px;
+  display:flex;
+  justify-content: center;
 }
 
 .container-drink-menu {
@@ -249,6 +254,7 @@ h1 {
   font-family: var(--header-font-family);
   color: var(--h1-color);
   font-size: 40px;
+  padding: 40px 0 40px 0;
 }
 
 h2 {
@@ -257,7 +263,7 @@ h2 {
   font-size: var(--h2-font-size);
   font-weight: bold;
   text-align: center;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
 }
 
 h3 {
@@ -265,21 +271,37 @@ h3 {
   font-family: var(--body-font-family);
   color: var(--black-text-color);
   font-size: 18px;
-  padding-bottom: 10px;
+  padding-bottom: 30px;
 }
- 
-.home {
+
+.collection-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 50px;
+  margin: 0 auto;
+  padding: 30px 0 30px 0;
+}
+
+.collection-item {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
   align-items: center;
 }
 
-.about  {
+.collection-item img {
+  height: 500px;
+  width: auto;
   display: flex;
-  flex-direction: column;
   margin: 0 auto;
-  align-items: center;
+}
+
+.collection-item p,
+.collection-item h2 {
+  display:flex;
+  text-align: left;
+  box-sizing: border-box;
 }
 
 .coffee-drinks,
@@ -480,7 +502,7 @@ footer {
   justify-content: center;
 }
 
-.footer-left, .logo img {
+.footer-left .logo img {
   margin: -10px 0 0 0;
 }
 
