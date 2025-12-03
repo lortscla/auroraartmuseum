@@ -73,8 +73,9 @@ html, body {
 .nav-links {
   list-style: none;
   display: flex;
+  justify-content: center;
   background-color: var(--bg-color);
-  padding: 30px;
+  padding: 0 0 30px 10px;
   gap: 100px;
   margin: 0 auto;
   border-radius: 15px;
@@ -131,12 +132,13 @@ html, body {
 .dropdown-menu {
   display: none;
   position: absolute;
-  top: 15px;
+  top: 100%;
   left: 50%;
   transform: translateX(-50%);
   background: white;
-  padding: 10px 0;
+  border-radius: 10px;
   width: 160px;
+  padding:0;
   text-align: center;
   z-index: 2000;
 }
@@ -263,17 +265,17 @@ p {
 }
 
 .carousel .carousel-control-prev {
-    left: 60px; 
+    left: 20px; 
 }
 
 .carousel .carousel-control-next {
-    right: 60px; 
+    right: 20px; 
 }
 
 .carousel .carousel-control-prev-icon,
 .carousel .carousel-control-next-icon {
-   width: 50px;
-   height: 50px;
+   width: 40px;
+   height: 40px;
    border-width: 0 5px 5px 0;  
    background-color:rgb(0, 0, 0);
 }
@@ -310,19 +312,21 @@ p {
 }
 
 .container-exhibitions p {
-  display:flex;
+  margin: 0 auto;
   text-align: center;
-  box-sizing: border-box;
+}
+
+.exhibition-caption {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-top: 20px;
 }
 
 .exhibition-caption p {
-  max-width: 80%;
-  font-family: var(--body-font-family);
-  font-size: var(--body-font-size);
-  color: var(--black-text-color);
-  display:flex;
   text-align: left;
-  justify-content: center;
+  max-width: 80%;
+  margin: 0;
 }
 
 .events img {
@@ -341,10 +345,16 @@ p {
 }
 
 .container-education-events p,
-.container-membership p {
+.container-membership p,
+.container-about p {
   padding-top: 20px;
   margin: 0 auto;
   text-align: center;
+  justify-content: center;
+}
+
+.container-about .exhibitions-row p {
+  text-align: left;
 }
 
 .container-membership-levels {
@@ -356,7 +366,7 @@ p {
   .membership-levels {
     display: flex;
     justify-content: space-between;
-    gap: 10px;
+    margin: 0 40px 0 40px;
     flex-wrap: wrap;
   }
 
@@ -367,6 +377,7 @@ p {
     flex: 1;
     padding: 20px;
     transition: transform 0.3s;
+    max-width: 23%;
   }
 
   .membership-card h2 {
@@ -409,173 +420,8 @@ p {
 
   .tickets .buttons {
     margin: 0;
+    align-self: flex-start;
   }
-
-
-
-
-
-
-
-.coffee-drinks,
-.other-drinks {
-  flex: 1;
-  margin:0 auto;
-  display:flex;
-  flex-direction: column;
-}
-
-.coffee-menu {
-  display: flex;
-  flex-direction: row;
-  margin: 0 auto;
-  gap: 200px;
-}
-
-.coffee-menu .col-1,
-.coffee-menu .col-2,
-.other-drinks-menu-main .col-1,
-.other-drinks-menu-main .col-2 {
-  flex: 1;
-  display: flex;
-  flex-direction: row;
-  gap: 40px;
-}
-
-.other-drinks-menu-main .col-1 .drink-names,
-.other-drinks-menu-main .col-2 .drink-names {
-  width:max-content;
-}
-
-.other-drinks-menu {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-}
-
-.other-drinks-menu-main {
-  display: flex;
-  flex-direction: row;
-  margin: 0 auto;
-  gap: 200px;
-}
-
-.teas ul {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px 30px;
-  list-style-position: inside;
-  padding:0;
-}
-
-.teas li {
-  font-family: var(--body-font-family);
-  font-size: var(--body-font-size);
-  color: var(--black-text-color);
-  margin:0;
-  line-height: 20px;
-}
-
-.home img {
-  width: 150%;
-  left: -25%;
-  height: auto;
-  display: block;
-  position: relative
-}
-
-.about img { 
-  width: 150%;
-  left: -25%;
-  height: auto;
-  display: block;
-  position: relative;
-}
-
-.coffee-drinks img {
-   height: 46%;
-  width: auto;
-}
-
-.other-drinks img {
-  height: 50%;
-  width: auto;
-}
-
-.sweet-items,
-.savory-items {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 50px;
-  padding: 20px;
-}
-
-.sweet-items img,
-.savory-items img {
-  width: 329px;
-  height: 302px;
-  display: block;
-  object-fit: cover;
-}
-
-.sweet-items p,
-.savory-items p {
-  text-align: center;
-  font-family: var(--body-font-family);
-  font-size: var(--body-font-size);
-  color: var(--black-text-color);
-}
-
-.coffee-menu .col-1 p,
-.coffee-menu .col-2 p,
-.other-drinks-menu-main .col-1 p,
-.other-drinks-menu-main .col-2 p {
-  font-family: var(--body-font-family);
-  font-size: var(--body-font-size);
-  color: var(--black-text-color);
-  line-height: 10px;
-}
-
-.home-text {
-  max-width: 700px;
-  font-family: var(--body-font-family);
-  font-size: var(--body-font-size);
-  color: var(--black-text-color);
-  text-align: center;
-}
-
-.home-text-review {
-  max-width: 900px;
-  margin: 0 auto;
-  font-family: var(--body-font-family);
-  font-size: var(--body-font-size);
-  color: var(--black-text-color);
-  text-align: left;
-  padding: 20px;
-}
-
-.about-text {
-  padding: 0 0 20px 20px;
-  max-width: 900px;
-  font-family: var(--body-font-family);
-  font-size: var(--body-font-size);
-  color: var(--black-text-color);
-}
-
-.home-cta {
-  margin-top: 15px;
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: var(--button-background-color);
-  border-radius: 10px;
-}
-
-.home-cta a {
-  text-decoration: none;
-  color: var(--button-text-color);
-  font-weight: bold;
-}
 
 /*----------------------------------------- footer -----------------------------------------*/
 
@@ -610,13 +456,21 @@ footer {
 }
 
 .footer-left {
-  gap: 30px;
+  gap: 10px;
   display:flex;
   justify-content: center;
 }
 
 .footer-left .logo img {
-  margin: -10px 0 0 0;
+ margin: 0 auto;
+ width: 250px;
+  height: auto;
+  padding-right: 20px;
+}
+
+.footer-left .buttons {
+  margin: 0;
+  justify-content: right;
 }
 
 .social {
@@ -638,8 +492,10 @@ footer {
 
 .social-text p {
   margin: 0;
-  padding-top: 10px;
+  padding: 20px 0 0 10px;
 }
+
+
 
 .hamburger {
   display: none;
