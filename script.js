@@ -1,30 +1,19 @@
 
-document.addEventListener("DOMContentLoaded", () => {
-  const hamburgerBtn = document.querySelector("#hamburger-btn .hamburger");
-  const navLinks = document.querySelector("#hamburger-btn .nav-links");
+document.querySelector(".hamburger").addEventListener("click", function () {
+    this.classList.toggle("is-active");
+    document.querySelector(".mobile-nav").classList.toggle("show");
+});
 
-  if (!hamburgerBtn || !navLinks) return;
+// Mobile dropdown toggles
+const toggles = document.querySelectorAll(".mobile-dropdown-toggle");
 
-  // Toggle menu when hamburger is clicked
-  hamburgerBtn.addEventListener("click", (e) => {
-    e.stopPropagation();
-    navLinks.classList.toggle("show");
-    hamburgerBtn.classList.toggle("is-active");
-  });
+toggles.forEach(toggle => {
+    toggle.addEventListener("click", function () {
+        const submenu = this.nextElementSibling;
+        const symbol = this.querySelector(".toggle-symbol");
 
-  // Close when clicking outside the menu
-  document.addEventListener("click", (event) => {
-    if (!event.target.closest("#hamburger-btn")) {
-      navLinks.classList.remove("show");
-      hamburgerBtn.classList.remove("is-active");
-    }
-  });
+        submenu.classList.toggle("show");
 
-  // Close menu when a link is clicked
-  navLinks.querySelectorAll("a").forEach(link => {
-    link.addEventListener("click", () => {
-      navLinks.classList.remove("show");
-      hamburgerBtn.classList.remove("is-active");
+        symbol.textContent = submenu.classList.contains("show") ? "–" : "+";
     });
-  });
 });

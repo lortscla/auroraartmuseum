@@ -27,6 +27,7 @@ html, body {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
+  background-color: var(--bg-color);
 }
 
 .topbar {
@@ -75,7 +76,7 @@ html, body {
   display: flex;
   justify-content: center;
   background-color: var(--bg-color);
-  padding: 0 0 30px 10px;
+  padding: 0 0 20px 10px;
   gap: 100px;
   margin: 0 auto;
   border-radius: 15px;
@@ -186,14 +187,15 @@ html, body {
 
 /*----------------------------------------- body -----------------------------------------*/
 
-.container-collection,
-.container-about,
-.container-exhibitions,
-.container-education-events,
-.container-membership,
-.container-home {
-  max-width: 1440px;
-  margin: 0 auto;
+#container-collection,
+#container-about,
+#container-exhibitions,
+#container-education-events,
+#container-membership,
+#container-home {
+  max-width: 100%;
+  background-color: #fff;
+  padding: 0 40px;
 }
 
 h1 {
@@ -230,7 +232,7 @@ p {
   color: var(--black-text-color);
 }
 
-.container-home p {
+#container-home p {
   max-width: 900px;
   margin: 0 auto;
   font-family: var(--body-font-family);
@@ -240,7 +242,7 @@ p {
   padding: 20px;
 }
 
-.container-home h2 {
+#container-home h2 {
   padding: 20px 0 0 0;
 }
 
@@ -286,8 +288,9 @@ p {
   flex-direction: row;
   justify-content: center;
   gap: 50px;
-  margin: 0 auto;
-  padding: 30px 0 30px 0;
+  margin: 0;
+  padding: 30px 0;
+  width: 100%;
 }
 
 .collection-item {
@@ -295,11 +298,13 @@ p {
   flex-direction: column;
   margin: 0 auto;
   align-items: center;
+  width: 650px;
 }
 
 .collection-item img {
-  height: 500px;
-  width: auto;
+  height: 400px;
+  width: 500px;
+  object-fit: cover;
   display: flex;
   margin: 0 auto;
 }
@@ -309,12 +314,24 @@ p {
   display:flex;
   text-align: left;
   box-sizing: border-box;
+  justify-content: center;
+  width: 80%;
 }
 
-.container-exhibitions p {
+#container-exhibitions p {
   margin: 0 auto;
   text-align: center;
 }
+
+ #container-about p {
+    width: 75%;
+    text-align: center;
+    margin: 0 auto;
+  }
+  
+  #container-about .buttons {
+   margin-top: 30px;
+  }
 
 .exhibition-caption {
   display: flex;
@@ -338,26 +355,24 @@ p {
   margin: 0 auto;
   text-align: center;
 }
-
-.container-education-events h2 {
+#container-education-events h2 {
   text-align: center;
   display: flex;
 }
 
-.container-education-events p,
-.container-membership p,
-.container-about p {
+#container-education-events p,
+#container-membership p,
+#container-about p {
   padding-top: 20px;
   margin: 0 auto;
   text-align: center;
   justify-content: center;
 }
 
-.container-about .exhibitions-row p {
+#container-about .exhibitions-row p {
   text-align: left;
 }
-
-.container-membership-levels {
+#container-membership-levels {
   margin: 0 auto;
   padding: 20px 0 20px 0;
   background-color: var(--bg-color);
@@ -373,7 +388,7 @@ p {
   .membership-card {
     background-color: #fff;
     border: 1px solid #ddd;
-    border-radius: 10px;
+    border-radius: 3px;
     flex: 1;
     padding: 20px;
     transition: transform 0.3s;
@@ -402,12 +417,6 @@ p {
   .benefits li {
     margin-bottom: 10px;
     line-height: 1.4;
-  }
-
-  .container-about p {
-    width: 75%;
-    text-align: center;
-    margin: 0 auto;
   }
 
   .tickets {
@@ -505,383 +514,223 @@ footer {
   display: none;
 }
 
-/*----------------------------------------- MOBILE 1300px -----------------------------------------*/
 
-@media (max-width: 1300px) {
+/* --- desktop --- */
+.desktop-nav { display: block; }
+.mobile-nav, #hamburger-btn { display: none; }
 
-  .container-drink-menu {
-    flex-wrap: wrap;
-  }
-
-  .coffee-drinks img,
-  .other-drinks img {
-   width: 85vw;
-    height: auto;
-}
-
-}
-
-/*----------------------------------------- MOBILE 1080px -----------------------------------------*/
+/*----------------------------------------- mobile 1080px -----------------------------------------*/
 
 @media (max-width: 1080px) {
 
-  .hero {
-    position: relative;
+  /* Hide desktop nav and secondary top links */
+  .desktop-nav,
+  .nav-links,                 /* desktop nav items */
+  .secondary-nav-links {      /* right-top secondary links */
+    display: none !important;
   }
 
-  .navbar {
-    top: 20px;
-    width: 100%;
-    padding: 0;
-    gap: 0;
-    background: transparent;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .logo {
-    top: 0;
-  }
-
-  .logo img {
-    height: 200px;
-  }
-
+  /* Show hamburger container and button */
   #hamburger-btn {
-  display: none;
-  }
-
-}
-
-/*----------------------------------------- MOBILE 800px starts hamburger menu -----------------------------------------*/
-
-@media (max-width: 800px) {
-  .hero {
-    position: relative;
-  }
-
-   .container-about p,
-   .container-home p {
-    max-width: 785px;
-  }
-
-  .container-drink-menu {
-    max-width: 85vw;
-    justify-content: center;
-    box-sizing: border-box;
-  }
-
-  .home img {
-    width: 90%;
-    max-width: 750px;
-    height: auto;
-    left: 0;
-    position: static;
-    display: block;
-    margin: 0 auto;
-  }
-
-  .logo {
-    top: 0;
-    padding-left: 60px;
-  }
-
-  .logo img {
-    width: 100%;
-  }
-
-  .navbar > nav {
-    display: none;
-  }
-
-    #hamburger-btn {
-    display: block;
-    position: absolute;
-    top: 100px;
-    right: 60px;
-    z-index: 1000;
-    background-color: #fff;
-    border-radius: 5px;
-  }
-
-  #hamburger-btn .hamburger {
-    display: block;
-    cursor: pointer;
-    background: #fff;
-    border: none;
-    border-radius: 8px;
-    width: 60px;
-    height: 50px;
-    padding-bottom: 35px;
-  }
-
-  .hamburger-box {
-    width: 30px;
-    height: 20px;
-    display: flex;
-    background: #fff;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-  }
-
-  .hamburger-inner {
-    display: block;
-    position: relative;
-    width: 30px;
-    height: 3px;
-    background-color: var(--black-text-color);
-    border-radius: 4px;
-    transition: transform 0.15s ease;
-  }
-
-  .hamburger-inner::before,
-  .hamburger-inner::after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 30px;
-    height: 3px;
-    background-color: var(--black-text-color);
-    border-radius: 4px;
-    transition: transform 0.15s ease;
-    left:0;
-  }
-
-  .hamburger.is-active .hamburger-inner::before {
-    opacity: 0;
-  }
-
-  .hamburger.is-active .hamburger-inner::after {
-    bottom: 0;
-  }
-
-  #hamburger-btn > nav {
-    display: block;
-    position: relative;
-  }
-
-  #hamburger-btn .nav-links {
+    display: block !important;
     position: fixed;
-    top: 200px; 
-    display:none;
+    top: 18px;
+    right: 18px;
+    z-index: 3000;
+  }
+
+  .hamburger {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 40px;
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  }
+
+  /* Mobile nav panel (hidden until show class) */
+  .mobile-nav {
+    display: none;
+    position: fixed;
+    top: 72px;             /* sits under logo area */
     left: 0;
-    width: 100%;
-    max-width: 100%; 
-    flex-direction: column;
-    gap: 0;
-    padding: 20px 0;
-    transition: top 0.3s ease; 
-    background-color: #fff;
-    border-radius: 0;
-    margin: 0;
-    z-index: 998; 
+    right: 0;
+    background: #fff;
+    z-index: 2999;
+    max-height: calc(100vh - 72px);
+    overflow-y: auto;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.12);
+    padding: 18px 16px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .mobile-nav.show {
+    display: block;
+  }
+
+  .mobile-links {
     list-style: none;
-    text-align: center;
-    align-items: center;
+    margin: 0;
+    padding: 0;
   }
 
-  #hamburger-btn .nav-links.show {
-    top: 200px;
-    display: flex;
-  }
-
-  #hamburger-btn .nav-links li {
+  .mobile-links > li {
+    padding: 12px 8px;
     border-bottom: 1px solid #eee;
-    width: 100%;
+    font-family: var(--header-font-family);
+    font-size: 18px;
   }
 
-  #hamburger-btn .nav-links li:last-child {
-    border-bottom: none;
-  }
-
-  #hamburger-btn .nav-links a {
-    font-size: 25px;
-    font-weight: var(--h2-font-weight);
-    display: block;
-    padding: 20px;
+  .mobile-links a {
+    text-decoration: none;
     color: var(--black-text-color);
-  }
-
-  #hamburger-btn .nav-links a:hover {
-    background-color: #f5f5f5;
-    color: var(--hover-color);
-  }
-}
-/*----------------------------------------- MOBILE 600px -----------------------------------------*/
-
-@media (max-width: 600px) {
-
-  .container-drink-menu {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    gap: 10px;
+    display: block;
     width: 100%;
-    max-width: 100%;
+    padding: 6px 4px;
   }
 
-   .container-about p, 
-   .container-home p {
-    max-width: 585px;
-  }
-
-  .coffee-menu,
-  .other-drinks-menu-main {
-    flex-direction: column;
-    align-items: center;
-    gap:0px;
-  }
-
-  .coffee-menu .col-1,
-  .coffee-menu .col-2,
-  .other-drinks-menu-main .col-1,
-  .other-drinks-menu-main .col-2 {
-    flex-direction: row;
-    align-items: center;
+  /* Collapsible submenu button row */
+  .mobile-dropdown-toggle {
+    width: 100%;
+    background: none;
+    border: none;
     text-align: left;
-  }
-
-  .coffee-menu .col-1,
-  .other-drinks-menu-main .col-1 {
-    padding-top: 20px;
-  }
-
-  .coffee-menu .col-2,
-  .other-drinks-menu-main .col-2 {
-    margin-top: -19px;
-  }
-
-  .other-drinks-menu-main .col-2 {
-    gap: 55px;
-  }
-
-  .coffee-menu img,
-  .other-drinks img {
-    width: 85vw;
-    height: auto;
-  }
-
-  .teas ul {
-    grid-template-columns: repeat(2, 1fr);
-    text-align: left;
-  }
-
-  .teas {
-    justify-content: center;
-    margin: 0 auto;
-  }
-}
-
-/*----------------------------------------- MOBILE 500px -----------------------------------------*/
-
-@media (max-width: 500px) {
-  .hero {
-    min-height: 200px;
-  }
-
-  .logo {
-    top: 0;
-    padding: 0;
-  }
-
-  .logo img {
-    width: 150px;
-    height: auto;
-  }
-
-   .container-about p,
-   .container-home p  {
-    max-width: 485px;
-  }
-
-}
-
-/*----------------------------------------- MOBILE 475 px -----------------------------------------*/
-
-@media (max-width: 475px) {
-  .hero {
-    padding-bottom: 75px;
-  }
-
-  .container-about p {
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    max-width: 310px;
-  }
-
-  .container-home p {
-    max-width: 310px;
-  }
-  
-.container-drink-menu {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0;
-  }
-
-  h1 {
-    font-size: 27px;
-  }
-
-  .coffee-drinks,
-  .other-drinks {
-    width: 100%;
+    font-size: 18px;
+    padding: 6px 4px;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
+    cursor: pointer;
+    font-family: var(--header-font-family);
   }
 
-  .coffee-drinks img,
-  .other-drinks img,
-  .container-about img {
-    width: 90%;
-    max-width: 320px; 
-    height: auto;
-    display: block;
-    margin: 0 auto;
+  .mobile-submenu {
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding-left: 12px;
+    padding-top: 8px;
+    padding-bottom: 8px;
   }
 
-  .container-food-menu img {
-    max-width: 310px;
-  }
-
-  .about img {
-    width: 90%;
-    max-width: 320px;
-    height: auto;
-    left: 0;
-    position: static;
-    display: block;
-    margin: 0 auto;
-  }
-
-  .teas ul li {
+  .mobile-submenu li {
+    padding: 8px 4px;
+    border-bottom: none;
     font-size: 16px;
   }
-  .logo img {
-    width: 150px;
-    height: auto;
-  }
 
-  .home img {
-    width: 90%;
-    max-width: 320px;
-    height: auto;
-    left: 0;
-    position: static;
+  .mobile-submenu.show {
     display: block;
-    margin: 0 auto;
   }
 
-  #hamburger-btn {
-    right: 10px;
+  .toggle-symbol {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1;
   }
+
+  /* Make ticket button look tappable and full width */
+  .mobile-ticket-btn .buttons,
+  .mobile-ticket-btn .buttons a {
+    display: block;
+    width: 100%;
+  }
+
+  .mobile-ticket-btn .buttons {
+    background: var(--button-background-color);
+    border-radius: 8px;
+    padding: 10px 0;
+    margin: 8px 0;
+    text-align: center;
+  }
+
+  .mobile-ticket-btn .buttons a {
+    color: var(--white-text-color);
+    font-weight: var(--h2-font-weight);
+    text-transform: var(--button-text-style);
+    font-family: var(--header-font-family);
+  }
+
+  /* -------------------------
+     Collections / Exhibitions stacking
+     make each pair stack vertically
+     ------------------------- */
+
+  .collection-row,
+  .exhibitions-row {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 18px !important;
+    padding: 18px 12px !important;
+  }
+
+  .collection-item {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+    align-items: flex-start !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .collection-item img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    object-fit: cover !important;
+    display: block !important;
+    margin: 0 0 12px 0 !important;
+  }
+
+  /* make headings and paragraphs more compact */
+  h1 { font-size: 30px; padding: 28px 0; }
+  h2 { font-size: 20px; margin-top: 12px; margin-bottom: 12px; }
+  p  { font-size: 16px; line-height: 1.45; }
+
+  /* Membership cards stack too */
+  .membership-levels {
+    flex-direction: column;
+    gap: 14px;
+    margin: 12px;
+  }
+  .membership-card { max-width: 100%; width: 100%; }
+
+  /* footer: stack vertically and reduce spacing */
+  footer { padding: 18px; flex-direction: column; gap: 18px; text-align: center; }
+
+}
+
+/* ------------------------- mobile 500px ------------------------- */
+
+@media (max-width: 500px) {
+
+  /* keep hamburger visible */
+  #hamburger-btn { top: 12px; right: 12px; }
+
+  .mobile-nav {
+    top: 64px;
+    padding: 12px 10px;
+    max-height: calc(100vh - 64px);
+  }
+
+  h1 { font-size: 24px; padding: 18px 0; }
+  h2 { font-size: 18px; margin-top: 10px; margin-bottom: 10px; }
+  p  { font-size: 15px; line-height: 1.4; }
+
+  .mobile-links > li { font-size: 16px; padding: 10px 6px; }
+  .mobile-dropdown-toggle { font-size: 16px; }
+  .mobile-submenu li { font-size: 14px; padding-left: 8px; }
+
+  .buttons { padding: 10px 8px; border-radius: 8px; }
+  .buttons a { display: block; padding: 8px 0; }
+
+  /* reduce large hero/carousel image height if you used fixed heights earlier */
+  .carousel-inner .carousel-item img { height: auto; max-height: 380px; object-fit: cover; }
+
+  /* reduce collection image max-size to save vertical space */
+  .collection-item img { max-height: 320px; }
 }
