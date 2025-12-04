@@ -523,14 +523,12 @@ footer {
 
 @media (max-width: 1080px) {
 
-  /* Hide desktop nav and secondary top links */
   .desktop-nav,
-  .nav-links,                 /* desktop nav items */
-  .secondary-nav-links {      /* right-top secondary links */
+  .nav-links,                 
+  .secondary-nav-links {      
     display: none !important;
   }
 
-  /* Show hamburger container and button */
   #hamburger-btn {
     display: block !important;
     position: fixed;
@@ -545,18 +543,15 @@ footer {
     justify-content: center;
     width: 48px;
     height: 40px;
-    background: #fff;
     border-radius: 8px;
-    border: 1px solid #eee;
+    background-color: transparent;
     cursor: pointer;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
   }
-
-  /* Mobile nav panel (hidden until show class) */
+  
   .mobile-nav {
     display: none;
     position: fixed;
-    top: 72px;             /* sits under logo area */
+    top: 72px;             
     left: 0;
     right: 0;
     background: #fff;
@@ -593,7 +588,6 @@ footer {
     padding: 6px 4px;
   }
 
-  /* Collapsible submenu button row */
   .mobile-dropdown-toggle {
     width: 100%;
     background: none;
@@ -633,7 +627,6 @@ footer {
     line-height: 1;
   }
 
-  /* Make ticket button look tappable and full width */
   .mobile-ticket-btn .buttons,
   .mobile-ticket-btn .buttons a {
     display: block;
@@ -655,10 +648,11 @@ footer {
     font-family: var(--header-font-family);
   }
 
-  /* -------------------------
-     Collections / Exhibitions stacking
-     make each pair stack vertically
-     ------------------------- */
+  .hero img {
+    height: 500px;
+    width: 100%;
+    object-fit: cover;
+  }
 
   .collection-row,
   .exhibitions-row {
@@ -686,12 +680,10 @@ footer {
     margin: 0 0 12px 0 !important;
   }
 
-  /* make headings and paragraphs more compact */
   h1 { font-size: 30px; padding: 28px 0; }
   h2 { font-size: 20px; margin-top: 12px; margin-bottom: 12px; }
   p  { font-size: 16px; line-height: 1.45; }
 
-  /* Membership cards stack too */
   .membership-levels {
     flex-direction: column;
     gap: 14px;
@@ -699,7 +691,6 @@ footer {
   }
   .membership-card { max-width: 100%; width: 100%; }
 
-  /* footer: stack vertically and reduce spacing */
   footer { padding: 18px; flex-direction: column; gap: 18px; text-align: center; }
 
 }
@@ -717,6 +708,12 @@ footer {
     max-height: calc(100vh - 64px);
   }
 
+   .hero img {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+  }
+
   h1 { font-size: 24px; padding: 18px 0; }
   h2 { font-size: 18px; margin-top: 10px; margin-bottom: 10px; }
   p  { font-size: 15px; line-height: 1.4; }
@@ -728,9 +725,7 @@ footer {
   .buttons { padding: 10px 8px; border-radius: 8px; }
   .buttons a { display: block; padding: 8px 0; }
 
-  /* reduce large hero/carousel image height if you used fixed heights earlier */
   .carousel-inner .carousel-item img { height: auto; max-height: 380px; object-fit: cover; }
 
-  /* reduce collection image max-size to save vertical space */
   .collection-item img { max-height: 320px; }
 }
