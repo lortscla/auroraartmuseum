@@ -28,6 +28,7 @@ html, body {
   max-width: 1440px;
   margin: 0 auto;
   background-color: var(--bg-color);
+  scroll-behavior: smooth;
 }
 
 .topbar {
@@ -172,17 +173,23 @@ html, body {
   display: inline-block;
   margin-left: 44%;
   margin-top: 40px;
-}
-
-.buttons a {
   text-decoration: none;
-  color: var(--white-text-color);
   font-weight: var(--h2-font-weight);
   font-family: var(--header-font-family);
   text-transform: var(--button-text-style);
   font-size: var(--button-font-size);
-  display: inline-block;
   text-wrap: nowrap;
+  padding: 15px 25px;
+  text-align: center;
+}
+
+a.buttons {
+  color: var(--white-text-color);
+}
+
+.buttons a{
+  color: var(--white-text-color);
+  text-decoration: none;
 }
 
 /*----------------------------------------- body -----------------------------------------*/
@@ -195,7 +202,7 @@ html, body {
 #container-home {
   max-width: 100%;
   background-color: #fff;
-  padding: 0 40px;
+  padding: 0 40px 40px 40px;
 }
 
 h1 {
@@ -335,16 +342,16 @@ p {
 
 .exhibition-caption {
   display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   padding-top: 20px;
 }
 
 .exhibition-caption p {
-  display:flex;
-  text-align: left;
-  max-width: 52%;
-  margin: 0;
-}
+    max-width: 50%;   
+    margin: 0;       
+  }
 
 .events img {
   margin: 0 auto;
@@ -771,7 +778,10 @@ footer {
     height: auto;
     object-fit: cover;
   }
-  
+
+  .membership-card .benefits ul {
+    margin-left: 20px;
+  }
 }
 
 /* ------------------------- mobile 600px ------------------------- */
