@@ -534,6 +534,10 @@ footer {
   display: none;
 }
 
+.mobile-nav {
+  margin-top: 60px;
+}
+
   .mobile-nav a:hover, 
   .dropdown-menu a:hover,
   .dropdown a:hover,
