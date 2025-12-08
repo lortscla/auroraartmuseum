@@ -533,7 +533,14 @@ footer {
   .dropdown:hover .dropdown-menu {
   display: none;
 }
-  
+
+  .mobile-nav a:hover, 
+  .dropdown-menu a:hover,
+  .dropdown a:hover,
+.mobile-nav .buttons a:hover {
+  color: var(--hover-color);
+}
+
   .carousel {
     position: relative;
     overflow: visible;
