@@ -115,7 +115,7 @@ html, body {
   display: flex;
   gap: 50px;
   list-style: none;
-  border:#000;
+  border:0.1px #000;
 }
 
 .secondary-nav-links a {
@@ -138,7 +138,7 @@ html, body {
   left: 50%;
   transform: translateX(-50%);
   background: white;
-  border-radius: 10px;
+  border: none;
   width: 160px;
   padding:0;
   text-align: center;
@@ -157,7 +157,8 @@ html, body {
   font-family: var(--header-font-family);
   text-transform: var(--button-text-style);
   font-size: var(--button-font-size);
-  border: 1px solid #000;
+  border-bottom: .1px solid #000;
+  font-weight: 300;
 }
 
 .logo img:hover {
@@ -464,7 +465,6 @@ footer {
 .footer-left p,
 .footer-middle p,
 .footer-right p {
-  text-align: left;
   font-family: var(--body-font-family);
   font-size: var(--body-font-size)-50%;
   color: var(--black-text-color);
@@ -472,7 +472,7 @@ footer {
 }
 
 .footer-left {
-  gap: 10px;
+  gap: 15px;
   display:flex;
   justify-content: center;
 }
@@ -529,9 +529,14 @@ footer {
 /*----------------------------------------- mobile 1400px -----------------------------------------*/
 
 @media (max-width: 1400px) {
+  
+  .dropdown:hover .dropdown-menu {
+  display: none;
+}
+  
   .carousel {
     position: relative;
-    overflow: visible !important;
+    overflow: visible;
   }
 
   .carousel .carousel-inner,
